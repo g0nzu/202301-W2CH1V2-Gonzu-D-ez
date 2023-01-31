@@ -1,26 +1,13 @@
-import { Rey } from './rey';
-import { Escudero } from './escudero';
-import { Luchador } from './luchador';
+import { Character } from './personaje.js';
 
-export class Asesor {
-  says: string = 'No sé por qué, pero creo que voy a morir pronto';
-  personajeAsesorado:
-    | Rey
-    | Luchador
-    | Escudero
-    | Asesor
-    | Escudero
-    | 'Daenerys';
-
+export class Adviser extends Character {
+  says = 'No sé por qué, pero creo que voy a morir pronto';
   constructor(
-    personajeAsesorado:
-      | Rey
-      | Luchador
-      | Escudero
-      | Asesor
-      | Escudero
-      | 'Daenerys'
+    public name: string,
+    public family: string,
+    public age: number,
+    public role: string
   ) {
-    this.personajeAsesorado = personajeAsesorado;
+    super(name, family, age, role);
   }
 }

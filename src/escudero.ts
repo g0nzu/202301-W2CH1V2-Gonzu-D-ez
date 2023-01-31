@@ -1,10 +1,13 @@
-import { Luchador } from './luchador';
+import { Character } from './personaje.js';
 
-export class Escudero {
-  says: string = 'No sé por qué, pero creo que voy a morir pronto';
-  personajeAsesorado: Luchador | Escudero | Escudero | 'Jaime';
-
-  constructor(personajeAsesorado: Luchador | Escudero | Escudero | 'Jaime') {
-    this.personajeAsesorado = personajeAsesorado;
+export class Squire extends Character {
+  says = 'Soy un loser';
+  constructor(
+    public name: string,
+    public family: string,
+    public age: number,
+    public role: string
+  ) {
+    super(name, family, age, role);
   }
 }

@@ -1,8 +1,15 @@
-export class Rey {
-  regnalYears: number;
-  says: string = 'Vais a morir todos!';
+import { Character } from './personaje.js';
 
-  constructor(regnalYears: number) {
-    this.regnalYears = regnalYears;
+export class King extends Character {
+  says = 'Vais a morir todos';
+  constructor(
+    public name: string,
+    public family: string,
+    public age: number,
+    public role: string,
+    public years: number
+  ) {
+    super(name, family, age, role);
+    this.years = years;
   }
 }
