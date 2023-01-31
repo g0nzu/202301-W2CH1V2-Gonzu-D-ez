@@ -1,9 +1,16 @@
-export class Luchador {
-  weapon: string;
-  skill: number;
-  says: string = 'Primero pego y luego pregunto';
+import { Character } from './personaje.js';
 
-  constructor(weapon: string, skill: number) {
+export class Fighter extends Character {
+  says = 'Primero pego y luego pregunto';
+  constructor(
+    public name: string,
+    public family: string,
+    public age: number,
+    public role: string,
+    public weapon: string,
+    public skill: number
+  ) {
+    super(name, family, age, role);
     this.weapon = weapon;
     this.skill = skill;
   }
